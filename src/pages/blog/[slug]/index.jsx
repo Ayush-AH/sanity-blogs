@@ -30,7 +30,9 @@ const BlogDetails = ({ post }) => {
       {/* Navbar */}
       <nav className="bg-gray-900 text-white p-6">
         <div className="container mx-auto flex justify-between items-center">
-          <Link href="/" className="text-2xl font-bold">MyBlog</Link>
+          <Link href="/" className="text-2xl font-bold">
+            MyBlog
+          </Link>
         </div>
       </nav>
 
@@ -89,5 +91,6 @@ export async function getStaticProps({ params }) {
     props: {
       post,
     },
+    revalidate: 60,
   };
 }

@@ -97,5 +97,6 @@ export async function getStaticProps() {
 const posts = await client.fetch(allPostsQuery);
   return {
     props: {posts},
+    revalidate: 60,
   };
 }
